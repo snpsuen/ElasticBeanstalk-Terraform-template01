@@ -8,7 +8,7 @@ stage = "test"
 
 name = "ebdemo01"
 
-description = "Test elastic-beanstalk-environment"
+description = "Elastic Beanstalk Environment Demo01"
 
 tier = "WebServer"
 
