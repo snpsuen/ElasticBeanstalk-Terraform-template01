@@ -9,7 +9,7 @@ To use or test the template, git clone the repo https://github.com/snpsuen/Elast
 1. Edit Dockerrun.aws.json in the base directory by specifying what docker image to deploy on EB. <br>
 2. zip ebdemo01_node-app01.zip Dockerrun.aws.json <br>
 3. aws s3 cp ebdemo01_node-app01.zip "s3://ebdem01.applicationversion.bucket/ebdemo01_node-app01.zip" <br>
-4. cd terraform, set variables where necessaey in terraform.tfvars as well as variables.tf for the root or child modules. <br>
+4. cd terraform, set variables where necessary via terraform.tfvars as well as variables.tf for the root or child modules. <br>
 5. Return the repo and run the three terraform commands below in order: <br>
 5.1  terraform init terraform <br>
 5.2  terraform plan terraform <br>
