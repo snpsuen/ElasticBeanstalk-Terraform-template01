@@ -1,6 +1,6 @@
 region = "ap-east-1"
 
-availability_zones = ["ap-east-2a", "ap-east-2b"]
+availability_zones = ["ap-east-1a", "ap-east-1b"]
 
 namespace = "eg"
 
