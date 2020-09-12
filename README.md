@@ -8,12 +8,12 @@ To use or test the template, git clone the repo https://github.com/snpsuen/Elast
 <p>
 1. Edit Dockerrun.aws.json in the base directory by specifying what docker image to deploy on EB. <br>
 2. zip ebdemo01_node-app01.zip Dockerrun.aws.json <br>
-3. aws s3 cp ebdemo01_node-app01.zip "s3://ebdem01.applicationversion.bucket/ebdemo01_node-app01.zip" <br>
+3. aws s3 cp ebdemo01_node-app01.zip s3://ebdem01.applicationversion.bucket/elasticbeanstalk/ebdemo01_node-app01.zip <br>
 4. cd terraform, set variables where necessary via terraform.tfvars as well as variables.tf for the root or child modules. <br>
 5. Return the repo and run the three terraform commands below in order: <br>
 5.1  terraform init terraform <br>
 5.2  terraform plan terraform <br>
 5.3  terraform apply terraform <br>
 <p>
-Finally, after provisioning all the resources related to the EB application, run the the AWS CLI command to deploy the specific application version onto RB. <br>
+Finally, after provisioning all the EB and AWS resources related to the application, run the the AWS CLI command to deploy the specific application version onto RB. <br>
 aws --region $REGION elasticbeanstalk update-environment --environment-name $(terraform output env_name) --version-label $(terraform output app_version)
