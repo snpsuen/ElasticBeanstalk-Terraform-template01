@@ -21,7 +21,7 @@ Directory tree of root and childfen modules:
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   ├── subnet
+│   ├── subnets
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
