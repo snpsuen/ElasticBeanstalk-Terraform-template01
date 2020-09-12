@@ -4,19 +4,19 @@ provider "aws" {
   region                  = var.aws_region
 }
 
-resource "aws_s3_bucket" "${var.name}" {
+resource "aws_s3_bucket" default {
   bucket = "${var.name}.applicationversion.bucket"
 }
 
-resource "aws_s3_bucket_object" "${var.name}" {
-  bucket = "aws_s3_bucket.${var.name}.id"
+resource "aws_s3_bucket_object" default {
+  bucket = aws_s3_bucket.default.id
   key    = "beanstalk/ebdemo01_node-app01.zip"
   source = "ebdemo01_node-app01.zip"
 }
 
-resource "aws_elastic_beanstalk_application_version" "${var.name}" {
+resource "aws_elastic_beanstalk_application_version" default {
   name        = "${var.name}_node-app01"
-  application = "$aws_elastic_beanstalk_application.${var.name}.name"
+  application = "${module.elastic_beanstalk_application.name}"
   description = "application version created by terraform"
   bucket      = "aws_s3_bucket.${var.name}.id"
   key         = "aws_s3_bucket_object.${var.name}.id"
