@@ -16,7 +16,7 @@ resource "aws_s3_bucket_object" default {
 
 resource "aws_elastic_beanstalk_application_version" default {
   name        = "${var.name}_node-app01"
-  application = "${module.elastic_beanstalk_application.name}"
+  application = module.elastic_beanstalk_application.name
   description = "application version created by terraform"
   bucket      = "aws_s3_bucket.${var.name}.id"
   key         = "aws_s3_bucket_object.${var.name}.id"
@@ -57,7 +57,7 @@ module "elastic_beanstalk_application" {
   attributes  = var.attributes
   tags        = var.tags
   delimiter   = var.delimiter
-  description = "Test elastic_beanstalk_application"
+  description = "Elastic Beanstalk Application Demo01"
 }
 
 module "elastic_beanstalk_environment" {
