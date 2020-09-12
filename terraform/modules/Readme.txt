@@ -1,35 +1,46 @@
 Directory tree of root and childfen modules:
 
-├── terraform
+├── [terraform]
 |   ├── main.tf
 |   ├── variables.tf
 |   ├── outputs.tf
 |   ├── versions.tf
 |   └── terraform.tfvars
 |
-├── modules
+├── [modules]
 |   |
-│   ├── ebe
+│   ├── [ebe]
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   ├── eba
+│   ├── [eba]
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   ├── vpc
+│   ├── [vpc]
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   ├── subnets
+│   ├── [subnets]
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── context.tf
+│   │   ├── nat-gateway.tf
+│   │   ├── nat-instance.tf
+│   │   ├── private.tf
+│   │   ├── public.tf
+│   │   └── outputs.tf
+│   ├── [label]
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   ├── label
+│   ├── [dnshost]
 │   │   ├── main.tf
+│   │   ├── context.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   ├── dnshost
+│   ├── [utilities]
 │   │   ├── main.tf
+│   │   ├── context.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
