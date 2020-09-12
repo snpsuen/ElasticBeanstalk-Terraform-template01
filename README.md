@@ -1,1 +1,1 @@
-# ElasticBeanstalk_Terraform_template01
+# ElasticBeanstalk-Terraform-template01
