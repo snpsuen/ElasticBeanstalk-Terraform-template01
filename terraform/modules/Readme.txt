@@ -7,7 +7,7 @@ Directory tree of root and childfen modules:
 |   ├── versions.tf
 |   ├── terraform.tfvars
 |   |
-|   └── [modules]
+|   ├── [modules]
 |   |   |
 |   │   ├── [ebe]
 |   │   │   ├── main.tf
