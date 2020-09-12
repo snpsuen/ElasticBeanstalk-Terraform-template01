@@ -11,7 +11,7 @@ resource "aws_s3_bucket" default {
 resource "aws_s3_bucket_object" default {
   bucket = aws_s3_bucket.default.id
   key    = "beanstalk/ebdemo01_node-app01.zip"
-  source = "ebdemo01_node-app01.zip"
+  source = "../ebdemo01_node-app01.zip"
 }
 
 resource "aws_elastic_beanstalk_application_version" default {
