@@ -65,7 +65,7 @@ elb_scheme = "public"
 // https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html#platforms-supported.docker
 solution_stack_name = "64bit Amazon Linux 2018.03 v2.12.17 running Docker 18.06.1-ce"
 
-version_label = ""
+version_label = "node-app01"
 
 dns_zone_id = "Z3SO0TKDDQ0RGG"
 
