@@ -15,5 +15,6 @@ To use or test the template, git clone the repo https://github.com/snpsuen/Elast
 5.2  terraform plan terraform <br>
 5.3  terraform apply terraform <br>
 <p>
-Finally, after provisioning all the EB and AWS resources related to the application, run the the AWS CLI command to deploy the specific application version onto RB. <br>
-aws --region $(terraform output aws_region) elasticbeanstalk update-environment --environment-name $(terraform output name) --version-label $(terraform output version-label)
+Finally, after provisioning all the EB and AWS resources related to the application, run the the AWS CLI command to deploy the specific application version onto RB.
+<p>
+aws --region $(terraform output aws_region) elasticbeanstalk update-environment --environment-name $(terraform output name) --version-label $(terraform output version_label)
