@@ -18,3 +18,5 @@ To use or test the template, git clone the repo https://github.com/snpsuen/Elast
 Finally, after provisioning all the EB and AWS resources related to the application, run the the AWS CLI command to deploy the desirable application version onto EB.
 <p>
 aws --region $(terraform output aws_region) elasticbeanstalk update-environment --environment-name $(terraform output name) --version-label $(terraform output version_label)
+<p>
+--- Sunny Suen
