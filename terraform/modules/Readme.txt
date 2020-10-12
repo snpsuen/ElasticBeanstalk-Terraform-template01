@@ -1,4 +1,4 @@
-Directory tree of root and childfen modules:
+Directory tree of root and children modules:
 
 ├── [terraform]
 |   ├── main.tf
